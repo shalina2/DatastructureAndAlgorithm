@@ -2,36 +2,38 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace linkedlist
+namespace linkedlist.classes 
 {
     public class Linklist
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-
+    
         public void Insert(int value)
-        { 
-        
-        Node insertedNode = new Node(value);
-        insertedNode.Next=Head;
-            Head =insertedNode;
+        {
+            Node insertedNode = new Node(value);
+            insertedNode.Next = Head;
+            Head = insertedNode;
+
+        }
 
 
-     }
-        public bool Includes(int values)
+
+
+        public bool Includes(int value)
         {
             Current = Head;
             while (Current.Next != null)
             {
-                if (Current.value == VALUE)
+                if (Current.Value == value)
                 {
                     return true;
                 }
                 Current = Current.NEXT;
 
             }
-            if (Current.Value == Value)
+            if (Current.value ==value)
             {
                 return true;
             }
@@ -43,7 +45,7 @@ namespace linkedlist
                 Current = Head;
                 while(Current != null)
                 {
-                    Console.Write(Current.VAlue + " ");
+                    Console.Write(Current.Value + " ");
                     Current = Current.Next;
                 }
             }
