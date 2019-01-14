@@ -1,2 +1,0 @@
-# DatastructureAndAlgorithm
-readme.md
