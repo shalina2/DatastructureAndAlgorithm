@@ -12,9 +12,9 @@ namespace linkedlist.classes
     
         public void Insert(int value)
         {
-            Node insertedNode = new Node(value);
-            insertedNode.Next = Head;
-            Head = insertedNode;
+            Node insertNode = new Node(value);
+            insertNode.Next = Head;
+            Head = insertNode;
 
         }
 
@@ -33,7 +33,7 @@ namespace linkedlist.classes
                 Current = Current.NEXT;
 
             }
-            if (Current.value ==value)
+            if (Current.Value == value)
             {
                 return true;
             }
@@ -45,7 +45,7 @@ namespace linkedlist.classes
                 Current = Head;
                 while(Current != null)
                 {
-                    Console.Write(Current.Value + " ");
+                    Console.Write(Current.Value +" ");
                     Current = Current.Next;
                 }
             }
