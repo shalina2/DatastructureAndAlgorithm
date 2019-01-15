@@ -1,4 +1,5 @@
 ﻿using System;
+using LinkedList.Classes;
 
 namespace linkedlist
 {
@@ -8,7 +9,7 @@ namespace linkedlist
         {
             Console.WriteLine("LinkedList!");
 
-            Linklist listing = new Linklist();
+            linklist listing = new LinkList();
             listing.insert(2);
             listing.insert(4);
             listing.insert(6);
@@ -24,6 +25,9 @@ namespace linkedlist
 
             listing.InsertBefore(10, 11);
             listing.print();
+            listing.InsertAfter(2, 100);
+            listing.print();
+
         }
     }
 }

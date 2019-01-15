@@ -8,17 +8,21 @@ namespace LinkedList.Classes
         public Node Current { get; set; }
 
       /// <summary>
-      /// 
+      /// we are trying to insert a new Node in the list.
       /// </summary>
       /// <param name="value"></param>
 
         public void Insert(int value)
         {
-            Node silly = new Node(value);
-            silly.Next = Head;
-            Head = silly;
+            Node node = new Node(value);
+            node.Next = Head;
+            Head = node;
         }
-
+        /// <summary>
+        /// below we are trying to give bool value which is if the next node in the list is not null to return a value which is true.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool Includes(int value)
         {
             Current = Head;
@@ -37,6 +41,9 @@ namespace LinkedList.Classes
 
             return false;
         }
+        /// <summary>
+        /// this  is the print which we output the list
+        /// </summary>
 
         public void Print()
         {
@@ -72,7 +79,11 @@ namespace LinkedList.Classes
             Current.Next = node;
 
         }
-
+        /// <summary>
+        /// below we are trying to write a method which help us insert a value before any value we want.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="newValue"></param>
         public void InsertBefore(int value, int newValue)
         {
             Current = Head;
@@ -96,6 +107,39 @@ namespace LinkedList.Classes
 
                 Current = Current.Next;
             }
+        }
+        public void InsertAfter(int value,int newvalue)
+        {
+            Current = Head;
+            if(Current == null)
+            {
+                Console.WriteLine("no list");
+                return;
+            }
+            if (Current.Value == value)
+            {
+                Node newNode = new Node(newlist);
+                newNode.Next = Current.Next;
+                Current.Next = newNode;
+                return;
+            }
+            while(Currrent.Next != null)
+            {
+                if (Current.Value == value)
+                {
+                    Node newNode = new Node(newValue);
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                }
+                Current = Current.Next;
+            }
+            if(Current.Value == value)
+            {
+                Node newNode = new Node(newvalue);
+                newNode.Next = Current.Next;
+                Current.Next = newNode;
+            }
+            return;
         }
 
 
