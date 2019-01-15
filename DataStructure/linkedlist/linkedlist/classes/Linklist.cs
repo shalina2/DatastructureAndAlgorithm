@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace linkedlist.classes 
+namespace LinkedList.Classes
 {
-    public class Linklist
+   public  class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-    
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="value"></param>
+
         public void Insert(int value)
         {
-            Node insertNode = new Node(value);
-            insertNode.Next = Head;
-            Head = insertNode;
-
+            Node silly = new Node(value);
+            silly.Next = Head;
+            Head = silly;
         }
-
-
-
 
         public bool Includes(int value)
         {
@@ -30,29 +28,75 @@ namespace linkedlist.classes
                 {
                     return true;
                 }
-                Current = Current.NEXT;
-
+                Current = Current.Next;
             }
             if (Current.Value == value)
             {
                 return true;
             }
+
             return false;
         }
 
-            public void print()
+        public void Print()
+        {
+            if (Head != null)
             {
                 Current = Head;
-                while(Current != null)
+
+                while (Current.Next != null)
                 {
-                    Console.Write(Current.Value +" ");
+                    System.Console.Write($"{Current.Value} => ");
                     Current = Current.Next;
                 }
+
+                System.Console.WriteLine($"{Current.Value} => Null");
+            }
+            else
+            {
+                System.Console.WriteLine("Your LL is empty");
+            }
+
+
+        }
+
+        public void Append(int value)
+        {
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Node node = new Node(value);
+
+            Current.Next = node;
+
+        }
+
+        public void InsertBefore(int value, int newValue)
+        {
+            Current = Head;
+
+            if (Current.Value == value)
+            {
+                Insert(newValue);
+                return;
+            }
+
+
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    return;
+                }
+
+                Current = Current.Next;
             }
         }
-       
-
-
 
 
     }
