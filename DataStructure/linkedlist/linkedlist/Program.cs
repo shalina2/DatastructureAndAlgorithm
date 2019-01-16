@@ -28,6 +28,15 @@ namespace linkedlist
             listing.InsertAfter(2, 100);
             listing.print();
 
+
+            int a = listing.GetValue(13);
+            int b = listing.GetValue(1);
+
+            int c = listing.GetValue(130);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
         }
     }
 }

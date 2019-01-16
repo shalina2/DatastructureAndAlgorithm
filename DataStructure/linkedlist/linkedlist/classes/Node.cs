@@ -14,9 +14,6 @@ namespace linkedlist.classes
             Value = value;
         }
 
-        public static implicit operator int(Node v)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
