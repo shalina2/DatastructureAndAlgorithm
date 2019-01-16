@@ -125,7 +125,7 @@ namespace LinkedList.Classes
                 Current.Next = newNode;
                 return;
             }
-            while(Currrent.Next != null)
+            while(Current.Next != null)
             {
                 if (Current.Value == value)
                 {

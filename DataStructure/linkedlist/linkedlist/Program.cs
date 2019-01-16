@@ -9,7 +9,7 @@ namespace linkedlist
         {
             Console.WriteLine("LinkedList!");
 
-            linklist listing = new LinkList();
+            LList listing = new LList();
             listing.insert(2);
             listing.insert(4);
             listing.insert(6);
