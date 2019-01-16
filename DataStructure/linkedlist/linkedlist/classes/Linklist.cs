@@ -120,7 +120,7 @@ namespace LinkedList.Classes
             }
             if (Current.Value == value)
             {
-                Node newNode = new Node(newlist);
+                Node newNode = new Node(newvalue);
                 newNode.Next = Current.Next;
                 Current.Next = newNode;
                 return;
@@ -129,7 +129,7 @@ namespace LinkedList.Classes
             {
                 if (Current.Value == value)
                 {
-                    Node newNode = new Node(newValue);
+                    Node newNode = new Node(newvalue);
                     newNode.Next = Current.Next;
                     Current.Next = newNode;
                 }

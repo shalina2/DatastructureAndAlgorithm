@@ -10,27 +10,27 @@ namespace linkedlist
             Console.WriteLine("LinkedList!");
 
             LList listing = new LList();
-            listing.insert(2);
-            listing.insert(4);
-            listing.insert(6);
+            listing.Insert(2);
+            listing.Insert(4);
+            listing.Insert(6);
 
-            listing.print();
+            listing.Print();
 
 
             listing.Append(8);
             listing.Append(10);
             listing.Append(12);
 
-            listing.print();
+            listing.Print();
 
             listing.InsertBefore(10, 11);
-            listing.print();
+            listing.Print();
             listing.InsertAfter(2, 100);
-            listing.print();
+            listing.Print();
 
 
             int a = listing.GetValue(13);
-            int b = listing.GetValue(1);
+            int b = listing.GetValue(2);
 
             int c = listing.GetValue(130);
             Console.WriteLine(a);
