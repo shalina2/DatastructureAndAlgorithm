@@ -18,90 +18,89 @@ namespace XUnitTestllist
 
         }
 
-        //[Fact]
-        //public void ifnotexist()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(34);
+       [Fact]
+        public void ifnotexist()
+        {
+            LList listing = new LList();
+            listing.Insert(34);
 
-        //    Assert.False(listed.Includes(4));
-        //}
-        //[Fact]
-        //public void ifvalueexists()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(2);
-        //    listed.Insert(4);
-        //    listed.Insert(6);
-        //    Assert.True(listed.Includes(8));
-        //}
-        //[Fact]
-        //public void canAppendValue()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(0);
-        //    listed.Insert(120);
-        //    listed.Insert(30);
-        //    listed.print();
+            Assert.False(listing.Includes(4));
+        }
+        [Fact]
+        public void ifvalueexists()
+        {
+            LList listing = new LList();
+            listing.Insert(2);
+            listing.Insert(4);
+             listing.Insert(8);
+               Assert.True(listing.Includes(8));
+            }
+            [Fact]
+            public void canAppendValue()
+            {
+            LList listing = new LList();
+            listing.Insert(0);
+            listing.Insert(120);
+            listing.Insert(30);
+            listing.Print();
 
-        //    listed.Current = listed.Head;
-        //    while(listed.Current.Next != null)
-        //    {
-        //        listed.Current = listed.current.Next;
-        //    }
-        //    int lookingfor = listed.Current.Value;
-        //    Assert.True(lookingfor == 53);
-        //}
-        //[Fact]
-        //public void canAppendValuetolast()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(0);
-        //    listed.Insert(10);
+            listing.Current = listing.Head;
+                while (listing.Current.Next != null)
+                {
+                listing.Current = listing.Current.Next;
+               }
+                int lookingfor = listing.Current.Value;
+                Assert.True(lookingfor == 53);
+            }
+           [Fact]
+            public void canAppendValuetolast()
+            {
+            LList listing = new LList();
+            listing.Insert(0);
+            listing.Insert(10);
 
-        //    listed.Insert(38);
+            listing.Insert(38);
 
-        //    listed.print();
+            listing.Print();
 
-        //    listed.Append(53);
+            listing.Append(53);
+            listing.Append(26);
+            listing.Current = listing.Head;
+               while(listing.Current.Next != null)
+                {
+                listing.Current = listing.Current.Next;
+                }
+                int lookingfor = listing.Current.Value;
+                Assert.True(lookingfor == 26);
 
-        //    listed.Append(26);
-        //    listed.Current = listed.head;
-        //    while(listed.current.Next != null)
-        //    {
-        //        listed.current = listed.current.Next;
-        //    }
-        //    int lookingfor = listed.current.Value;
-        //    Assert.True(lookingfor == 26);
+            }
+            [Fact]
+        public void insertbeforelast()
+        {
+            LList listing = new LList();
+            listing.Insert(0);
+            listing.Insert(10);
 
-        //}
-        //[Fact]
-        //public void insertbeforelast()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(0);
-        //    listed.Insert(10);
+            listing.Insert(38);
 
-        //    listed.Insert(38);
+            listing.Print();
 
-        //    listed.print();
+            listing.InsertBefore(38, 40);
+            listing.Current = listing.Head;
+            int lookingfor = 0;
+            while (listing.Current.Next != null)
+            {
+                listing.Current = listing.Current.Next;
+                if (listing.Current.Value == 24)
+                {
+                    lookingfor = listing.Current.Next.Value;
+                }
+            }
 
-        //    listed.InsertBefore(38, 40);
-        //    listed.current=listed.Head;
-        //    int lookingfor = 0;
-        //    while (listed.Current .Next != null)
-        //    {
-        //        listed.Current = listed.Current.Next;
-        //        if(listed.Current.VAlue == 24)
-        //        {
-        //            lookingfor = listed.current.next.value;
-        //        }
-        //    }
-
-        //    Assert.True(lookingfor == 26);
-        //}
+            Assert.True(lookingfor == 26);
+        }
     }
-    }
+}
     
     
     
