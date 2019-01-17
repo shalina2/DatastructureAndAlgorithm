@@ -18,7 +18,7 @@ namespace MergeList
 
             list1.Insert(4);
 
-            list1.print();
+            list1.Print();
 
             LList list2 = new LList();
 
