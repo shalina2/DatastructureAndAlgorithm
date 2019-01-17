@@ -1,8 +1,11 @@
-﻿using System;
+﻿using linkedlist.classes;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace LinkedList.Classes
 {
-   public  class LList
+   public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
@@ -118,16 +121,16 @@ namespace LinkedList.Classes
             }
             if (Current.Value == value)
             {
-                Node newNode = new Node(newlist);
+                Node newNode = new Node(newvalue);
                 newNode.Next = Current.Next;
                 Current.Next = newNode;
                 return;
             }
-            while(Currrent.Next != null)
+            while(Current.Next != null)
             {
                 if (Current.Value == value)
                 {
-                    Node newNode = new Node(newValue);
+                    Node newNode = new Node(newvalue);
                     newNode.Next = Current.Next;
                     Current.Next = newNode;
                 }
@@ -142,6 +145,34 @@ namespace LinkedList.Classes
             return;
         }
 
+        public int GetValue(int k)
+        {
+            Current = Head;
+            int counter = 0;
 
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+                counter++;
+            }
+            counter++;
+
+            Current = Head;
+            int counter2 = 0;
+            while(Current.Next != null)
+            {
+                counter2++;
+                if (counter2 + k == counter) return Current.Value;
+                Current = Current.Next;
+            }
+            counter2++;
+            if (counter2 + k == counter) return Current.Value;
+            else
+            {
+                Console.Write("Exception!");
+                return -1;
+              
+            }
+        }
     }
 }
