@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using linkedlist.classes;
 using LinkedList.Classes;
 
 
@@ -26,7 +27,7 @@ namespace MergeList
 
             list2.Insert(5);
 
-            list2.print();
+            list2.Print();
 
             Console.WriteLine("++++++++++++++++++++++");
 
@@ -100,22 +101,9 @@ namespace MergeList
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
             while (counter1 < counter2 && list1.Current.Next != null)
 
             {
-
-
 
                 Node temp = list1.Current.Next;
 
@@ -134,10 +122,10 @@ namespace MergeList
             }
 
             list1.Current.Next = list2.Current;
-            list1.print();
+            list1.Print();
 
         }
 
     }
 }
-}
+
