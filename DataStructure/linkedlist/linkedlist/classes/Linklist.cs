@@ -1,10 +1,11 @@
-﻿using System;
+﻿using linkedlist.classes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LinkedList.Classes
 {
-   public  class LList
+   public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
