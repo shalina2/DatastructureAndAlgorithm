@@ -29,7 +29,7 @@ namespace MergeList
 
             list2.Print();
 
-            Console.WriteLine("++++++++++++++++++++++");
+            Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxx");
 
             MergeList(list1, list2);
         }
