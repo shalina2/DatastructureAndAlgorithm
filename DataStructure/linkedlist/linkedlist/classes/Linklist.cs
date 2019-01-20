@@ -56,21 +56,18 @@ namespace LinkedList.classes
 
                 while (Current.Next != null)
                 {
-                    System.Console.Write($"{Current.Value} => ");
+                    Console.Write($"{Current.Value} => ");
                     Current = Current.Next;
                 }
 
-                System.Console.WriteLine($"{Current.Value} => Null");
+                Console.WriteLine($"{Current.Value} => Null");
             }
             else
             {
-                System.Console.WriteLine("Your LL is empty");
+                Console.WriteLine("Your LL is empty");
             }
 
-
-        }
-
-        
+        }       
               
             }
         }
