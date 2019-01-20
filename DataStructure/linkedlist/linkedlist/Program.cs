@@ -16,9 +16,7 @@ namespace linkedlist
             listing.Insert(6);
 
             listing.Print();          
-            listing.Append(12);
-
-            listing.Print();
+            
                      
 
         }

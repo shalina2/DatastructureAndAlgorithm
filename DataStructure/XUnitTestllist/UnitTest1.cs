@@ -28,22 +28,19 @@ namespace XUnitTestllist
         }
 
         [Fact]
-        public void AppendValue()
+        public void PrintValue()
         {
             LList listing = new LList();
             listing.Insert(0);
-            listing.Insert(120);
+            listing.Insert(20);
             listing.Print();
-            listing.Append (30);
-            
-
             listing.Current = listing.Head;
             while (listing.Current.Next != null)
             {
                 listing.Current = listing.Current.Next;
             }
             int lookingfor = listing.Current.Value;
-            Assert.True(lookingfor == 30);
+            Assert.False(lookingfor == 20);
         }       
     }
     }
