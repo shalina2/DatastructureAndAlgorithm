@@ -30,7 +30,7 @@ namespace array_binary_search
                 }
                 else
                 {
-                    rightIndex = middle - 1; //if the key is less than the middlepoint.
+                    rightIndex = middle - 1; //if the searchkey is less than the middlepoint.
                 }
             }
             return -1;
