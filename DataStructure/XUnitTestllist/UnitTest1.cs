@@ -11,30 +11,22 @@ namespace XUnitTestllist
         {
             LList listing = new LList();
             listing.Insert(2);
-            listing.Insert(34);
+            listing.Insert(4);
             listing.Insert(6);
 
-            Assert.True(listing.Includes(34));
+            Assert.True(listing.Includes(4));
 
         }
 
-        //[Fact]
-        //public void ifnotexist()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(34);
+        [Fact]
+        public void ifnotexist()
+        {
+            LList listing = new LList();
+            listing.Insert(44);
 
-        //    Assert.False(listed.Includes(4));
-        //}
-        //[Fact]
-        //public void ifvalueexists()
-        //{
-        //    linklist listed = new linklist();
-        //    listed.Insert(2);
-        //    listed.Insert(4);
-        //    listed.Insert(6);
-        //    Assert.True(listed.Includes(8));
-        //}
+            Assert.False(listing.Includes(4));
+        }
+        
         //[Fact]
         //public void canAppendValue()
         //{
