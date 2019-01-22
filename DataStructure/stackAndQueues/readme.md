@@ -7,3 +7,9 @@ Stack with a top property.I created a method with all Top,Push and Peek.
 
 Queue is a useful data structure.putting an item in queue is called dequeue.
 I also included methods for the front,enqueue,dequeue,and peek as well.
+
+Approach and efficency
+Big o for stack: space o(1)
+                 Time o(1)
+                 
+All public has access to the API
