@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LinkedList.Classes
+namespace LinkedList.classes
 {
    public class LList
     {
@@ -56,16 +56,17 @@ namespace LinkedList.Classes
 
                 while (Current.Next != null)
                 {
-                    System.Console.Write($"{Current.Value} => ");
+                    Console.Write($"{Current.Value} => ");
                     Current = Current.Next;
                 }
 
-                System.Console.WriteLine($"{Current.Value} => Null");
+                Console.WriteLine($"{Current.Value} => Null");
             }
             else
             {
-                System.Console.WriteLine("Your LL is empty");
+                Console.WriteLine("Your LL is empty");
             }
+
 
 
         }
@@ -172,8 +173,10 @@ namespace LinkedList.Classes
             {
                 Console.Write("Exception!");
                 
+
+        }       
+
               
             }
         }
-    }
-}
+    
