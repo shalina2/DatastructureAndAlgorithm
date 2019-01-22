@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LinkedList.classes
+namespace LinkedList.Classes
 {
    public class LList
     {
@@ -56,19 +56,124 @@ namespace LinkedList.classes
 
                 while (Current.Next != null)
                 {
-                    Console.Write($"{Current.Value} => ");
+                    System.Console.Write($"{Current.Value} => ");
                     Current = Current.Next;
                 }
 
-                Console.WriteLine($"{Current.Value} => Null");
+                System.Console.WriteLine($"{Current.Value} => Null");
             }
             else
             {
-                Console.WriteLine("Your LL is empty");
+                System.Console.WriteLine("Your LL is empty");
             }
 
-        }       
+
+        }
+
+        public void Append(int value)
+        {
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Node node = new Node(value);
+
+            Current.Next = node;
+
+        }
+        /// <summary>
+        /// below we are trying to write a method which help us insert a value before any value we want.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="newValue"></param>
+        public void InsertBefore(int value, int newValue)
+        {
+            Current = Head;
+
+            if (Current.Value == value)
+            {
+                Insert(newValue);
+                return;
+            }
+
+
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    return;
+                }
+
+                Current = Current.Next;
+            }
+        }
+        public void InsertAfter(int value,int newvalue)
+        {
+            Current = Head;
+            if(Current == null)
+            {
+                Console.WriteLine("no list");
+                return;
+            }
+            if (Current.Value == value)
+            {
+                Node newNode = new Node(newvalue);
+                newNode.Next = Current.Next;
+                Current.Next = newNode;
+                return;
+            }
+            while(Current.Next != null)
+            {
+                if (Current.Value == value)
+                {
+                    Node newNode = new Node(newvalue);
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                }
+                Current = Current.Next;
+            }
+            if(Current.Value == value)
+            {
+                Node newNode = new Node(newvalue);
+                newNode.Next = Current.Next;
+                Current.Next = newNode;
+            }
+            return;
+        }
+
+        public int GetValue(int k)
+        {
+
+            Current = Head;
+            int counter = 0;
+
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+                counter++;
+            }
+            counter++;
+
+            Current = Head;
+            int counter2 = 0;
+            while(Current.Next != null)
+            {
+                counter2++;
+                if (counter2 + k == counter) return Current.Value;
+                Current = Current.Next;
+            }
+            counter2++;
+            if (counter2 + k == counter) return Current.Value;
+            else
+            {
+                Console.Write("Exception!");
+                
               
             }
         }
-    
+    }
+}
