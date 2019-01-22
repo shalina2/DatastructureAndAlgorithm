@@ -10,3 +10,5 @@ This challenge was working on getting the k  value from the linklisted list star
 which the counter and current move together(as long as counter> k) until the end the runner is one step behind.that way we get to the end of the list and we start getting
 the kth value.
 Big o for space is 0(1) and time is 0(n);
+
+![](https://github.com/shalina2/DatastructureAndAlgorithm/blob/ll_kth_from_end/Asset/Image%20from%20iOS.jpg)
