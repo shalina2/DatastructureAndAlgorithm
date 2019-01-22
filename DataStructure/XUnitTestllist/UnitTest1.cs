@@ -6,15 +6,7 @@ namespace XUnitTestllist
 {
     public class UnitTest1
     {
-        [Fact]
-        public void ifexists()
-        {
-            LList listing = new LList();
-            listing.Insert(2);
-           
-            Assert.True(listing.Includes(2));
-
-        }
+      
 
        [Fact]
         public void ifnotexist()

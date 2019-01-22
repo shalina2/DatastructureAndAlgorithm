@@ -147,6 +147,7 @@ namespace LinkedList.Classes
 
         public int GetValue(int k)
         {
+
             Current = Head;
             int counter = 0;
 
@@ -170,7 +171,7 @@ namespace LinkedList.Classes
             else
             {
                 Console.Write("Exception!");
-                return -1;
+                
               
             }
         }
