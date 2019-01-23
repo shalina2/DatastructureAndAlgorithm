@@ -1,27 +1,17 @@
 ﻿using System;
+
 using linkedlist.classes;
 using LinkedList.Classes;
+
+
+
 
 namespace linkedlist
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("LinkedList!");
+       
 
-            LList listing1 = new LList();
-            listing1.Insert(2);
-            listing1.Insert(4);
-            listing1.Insert(6);
-            LList listing2 = new LList();
-            listing2.Print();                    
-            listing2.Insert (8);          
-            listing2.Insert(10);
-            listing2.Print();           
-            Console.WriteLine();
-            MergeLists(listing1, listing2);
-        }
 
             public static void MergeLists(LList list1, LList list2)
 
@@ -61,6 +51,11 @@ namespace linkedlist
                     list1.Current.Next = temp;
                     list1.Current = list1.Current.Next;
                 }
+
+            listing.Print();          
+            
+                     
+
 
                 while (counter1 == counter2 && list2.Current.Next != null)
                 {
