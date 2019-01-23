@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace QueueWithStacks
@@ -8,12 +9,8 @@ namespace QueueWithStacks
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            QueueWithStacks();
 
-        }
-        public static void QueueWithStacks()
-        {
-            Node node1 = new Node(5);
+            Node node1 = new Node(4);
             Stack stack = new Stack(node1);
             stack.Push(4);
             stack.Push(3);

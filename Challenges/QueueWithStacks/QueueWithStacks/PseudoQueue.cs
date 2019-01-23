@@ -62,6 +62,17 @@ namespace QueueWithStacks
 
             int[] arr = new int[counter];
             current = stack.Top;
+            for(int i =0;i <arr.Length; i++)
+            {
+                arr[i] = current.Value;
+                current = current.Next;
+            }
+            for (int i = 0; i < arr.Length - 1; i >=0; i--)
+            {
+                arr[i] = current.Value;
+                current = current.Next;
+            }
+
 
         }
 
