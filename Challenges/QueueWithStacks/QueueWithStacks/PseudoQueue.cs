@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using System.Text;
-using QueueWithStacks;
+
 
 namespace QueueWithStacks
 {
@@ -62,20 +62,65 @@ namespace QueueWithStacks
 
             int[] arr = new int[counter];
             current = stack.Top;
-            for(int i =0;i <arr.Length; i++)
+            for(int i =0;i < arr.Length; i++)
             {
                 arr[i] = current.Value;
                 current = current.Next;
             }
-            for (int i = 0; i < arr.Length - 1; i >=0; i--)
+            for (int i = arr.Length-1; i >=0; i--)
             {
-                arr[i] = current.Value;
-                current = current.Next;
+                Console.Write(arr[i] + " " + "=>");
             }
+
+            Console.WriteLine("Front");
+            Front = stack;
 
 
         }
+         public class Stack
+        {
+            public Node Top { get; set; }
 
+            public Stack(Node node)
+            {
+                Top = node;
+            }
+            // creating a stack which holds the pushed
+            public Stack()
+            {
+
+            }
+
+            public void Push(int value)
+            {
+                Node node = new Node(value);
+                node.Next = Top;
+                Top = node;
+            }
+
+            public Node Pop()
+            {
+                Node temp = Top;
+                Top = Top.Next;
+                temp.Next = null;
+                return temp;
+            }
+            public Node peek()
+            {
+                return Top;
+            }
+        }
+        ///Creating a Node
+        public class Node
+        {
+            public int Value { get; set; }
+            public Node Next { get; set; }
+
+            public Node(int value)
+            {
+                Value = value;
+            }
+        }
 
         }
     }
