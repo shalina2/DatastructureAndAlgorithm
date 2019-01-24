@@ -51,11 +51,8 @@ namespace XUnitTestllist
             LList listing = new LList();
             listing.Insert(0);
             listing.Insert(10);
-
             listing.Insert(18);
-
             listing.Print();
-
             listing.Append(13);
             listing.Append(26);
             listing.Current = listing.Head;
@@ -73,13 +70,9 @@ namespace XUnitTestllist
             LList listing = new LList();
             listing.Insert(0);
             listing.Insert(10);
-
             listing.Insert(18);
-
             listing.Print();
-
             listing.InsertBefore(10, 40);
-
             listing.Current = listing.Head;
 
             while (listing.Current.Next != null)
@@ -90,12 +83,9 @@ namespace XUnitTestllist
                 {
                     lookingfor = listing.Current.Next.Value;
                 }
-               // int lookingfor = listing.Current.Value;
-
-                Assert.False(lookingfor == 10);
+               
+                Assert.True(lookingfor == 40);
             }
-
-
         }
     }
 }
