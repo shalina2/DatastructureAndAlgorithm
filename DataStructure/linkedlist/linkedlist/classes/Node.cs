@@ -13,7 +13,6 @@ namespace linkedlist.classes
         {
             Value = value;
         }
-
        
     }
 }

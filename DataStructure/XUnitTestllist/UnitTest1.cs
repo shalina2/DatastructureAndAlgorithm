@@ -1,4 +1,4 @@
-using LinkedList.Classes;
+using LinkedList.classes;
 using System;
 using Xunit;
 
@@ -6,8 +6,6 @@ namespace XUnitTestllist
 {
     public class UnitTest1
     {
-      
-
        [Fact]
         public void ifnotexist()
         {
@@ -81,8 +79,8 @@ namespace XUnitTestllist
             listing.Print();
 
             listing.InsertBefore(10, 40);
+       
             listing.Current = listing.Head;
-            int lookingfor = 0;
             while (listing.Current.Next != null)
             {
                 listing.Current = listing.Current.Next;
@@ -90,12 +88,13 @@ namespace XUnitTestllist
                 {
                     lookingfor = listing.Current.Next.Value;
                 }
-            }
 
             Assert.True(lookingfor == 10);
         }
+        
+
+        }
     }
-}
     
     
     
