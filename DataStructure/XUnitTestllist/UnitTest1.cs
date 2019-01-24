@@ -6,7 +6,7 @@ namespace XUnitTestllist
 {
     public class UnitTest1
     {
-       [Fact]
+        [Fact]
         public void ifnotexist()
         {
             LList listing = new LList();
@@ -20,13 +20,13 @@ namespace XUnitTestllist
             LList listing = new LList();
             listing.Insert(2);
             listing.Insert(4);
-             listing.Insert(8);
-               Assert.True(listing.Includes(8));
+            listing.Insert(8);
+            Assert.True(listing.Includes(8));
         }
 
         [Fact]
-            public void canAppendValue()
-            {
+        public void canAppendValue()
+        {
             LList listing = new LList();
             listing.Insert(0);
             listing.Insert(120);
@@ -35,19 +35,19 @@ namespace XUnitTestllist
             listing.Append(13);
 
             listing.Current = listing.Head;
-                while (listing.Current.Next != null)
-                {
+            while (listing.Current.Next != null)
+            {
                 listing.Current = listing.Current.Next;
-               }
-
-                int lookingfor = listing.Current.Value;
-                Assert.True(lookingfor == 13);
             }
+
+            int lookingfor = listing.Current.Value;
+            Assert.True(lookingfor == 13);
+        }
 
 
         [Fact]
-            public void canAppendValuetolast()
-        { 
+        public void canAppendValuetolast()
+        {
             LList listing = new LList();
             listing.Insert(0);
             listing.Insert(10);
@@ -59,15 +59,15 @@ namespace XUnitTestllist
             listing.Append(13);
             listing.Append(26);
             listing.Current = listing.Head;
-               while(listing.Current.Next != null)
-                {
+            while (listing.Current.Next != null)
+            {
                 listing.Current = listing.Current.Next;
-                }
-                int lookingfor = listing.Current.Value;
-                Assert.True(lookingfor == 26);
-
             }
-            [Fact]
+            int lookingfor = listing.Current.Value;
+            Assert.True(lookingfor == 26);
+
+        }
+        [Fact]
         public void insertbefore()
         {
             LList listing = new LList();
@@ -79,22 +79,26 @@ namespace XUnitTestllist
             listing.Print();
 
             listing.InsertBefore(10, 40);
-       
+
             listing.Current = listing.Head;
+
             while (listing.Current.Next != null)
             {
-                listing.Current = listing.Current.Next;
+                //listing.Current = listing.Current.Next;
+                int lookingfor = listing.Current.Value;
                 if (listing.Current.Value == 40)
                 {
                     lookingfor = listing.Current.Next.Value;
                 }
+               // int lookingfor = listing.Current.Value;
 
-            Assert.True(lookingfor == 10);
-        }
-        
+                Assert.False(lookingfor == 10);
+            }
+
 
         }
     }
+}
     
     
     

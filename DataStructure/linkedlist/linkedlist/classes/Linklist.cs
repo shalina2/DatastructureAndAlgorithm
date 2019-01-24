@@ -5,15 +5,15 @@ using System.Text;
 
 namespace LinkedList.classes
 {
-   public class LList
+    public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-      /// <summary>
-      /// we are trying to insert a new Node in the list.
-      /// </summary>
-      /// <param name="value"></param>
+        /// <summary>
+        /// we are trying to insert a new Node in the list.
+        /// </summary>
+        /// <param name="value"></param>
 
         public void Insert(int value)
         {
@@ -112,10 +112,10 @@ namespace LinkedList.classes
                 Current = Current.Next;
             }
         }
-        public void InsertAfter(int value,int newvalue)
+        public void InsertAfter(int value, int newvalue)
         {
             Current = Head;
-            if(Current == null)
+            if (Current == null)
             {
                 Console.WriteLine("no list");
                 return;
@@ -127,7 +127,7 @@ namespace LinkedList.classes
                 Current.Next = newNode;
                 return;
             }
-            while(Current.Next != null)
+            while (Current.Next != null)
             {
                 if (Current.Value == value)
                 {
@@ -137,7 +137,7 @@ namespace LinkedList.classes
                 }
                 Current = Current.Next;
             }
-            if(Current.Value == value)
+            if (Current.Value == value)
             {
                 Node newNode = new Node(newvalue);
                 newNode.Next = Current.Next;
@@ -146,7 +146,7 @@ namespace LinkedList.classes
             return;
         }
 
-        public int GetValue(int k)
+        public int GetValue (int k)
         {
 
             Current = Head;
@@ -161,7 +161,7 @@ namespace LinkedList.classes
 
             Current = Head;
             int counter2 = 0;
-            while(Current.Next != null)
+            while (Current.Next != null)
             {
                 counter2++;
                 if (counter2 + k == counter) return Current.Value;
@@ -172,11 +172,12 @@ namespace LinkedList.classes
             else
             {
                 Console.Write("Exception!");
-                
 
-        }       
 
-              
             }
+
+            return k;
         }
+    }
+}
     
