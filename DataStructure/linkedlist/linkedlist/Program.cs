@@ -5,7 +5,7 @@ namespace linkedlist
 {
     public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
 
             Console.WriteLine("LinkedList!");
@@ -15,9 +15,22 @@ namespace linkedlist
             listing.Insert(4);
             listing.Insert(6);
 
-            listing.Print();          
-            
-                     
+            listing.Print();
+            listing.InsertAfter(6, 8);
+            listing.Print();
+            listing.InsertBefore(6, 5);
+            listing.Append(3);
+            listing.Print();
+            Console.WriteLine("...............");
+
+            int a = listing.GetValue(9);
+            int b = listing.GetValue(1);
+            int c = listing.GetValue(44);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+
 
         }
     }
