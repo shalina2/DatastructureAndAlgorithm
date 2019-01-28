@@ -10,6 +10,20 @@ namespace MergeList_test
         [Fact]
         public void FirstListLong()
         {
+
+        LList list1 = new LList();
+
+        list1.Insert(1);
+        list1.Insert(2);
+        list1.Insert(3);
+        list1.Insert(4);
+            LList list2 = new LList();
+            list2.Insert(5);
+            list2.Insert(10);
+           Program.MergeList (list1, list2);
+            Assert.Equal(5, list1.GetValue(1));
+        }
+
             LList list1 = new LList();
 
             list1.Insert(1);
@@ -57,6 +71,7 @@ namespace MergeList_test
 
 
         }
+
 
     }
 }

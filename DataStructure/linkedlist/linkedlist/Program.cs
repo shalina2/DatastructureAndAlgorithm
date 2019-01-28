@@ -1,7 +1,11 @@
 ﻿using System;
 
+using LinkedList.classes;
+=======
+
 using linkedlist.classes;
 using LinkedList.Classes;
+
 
 
 
@@ -10,6 +14,11 @@ namespace linkedlist
 {
     public class Program
     {
+       public static void Main(string[] args)
+        {
+
+            Console.WriteLine("LinkedList!");
+
        
 
 
@@ -37,12 +46,33 @@ namespace linkedlist
                     counter2++;
                 }
 
+
                 counter2++;
                 //reset the current to the head
                 list1.Current = list1.Head;
                 list2.Current = list2.Head;
                 while (counter1 > counter2 && list1.Current.Next != null)
                 {
+
+
+            listing.Print();
+            listing.InsertAfter(6, 8);
+            listing.Print();
+            listing.InsertBefore(6, 5);
+            listing.Append(3);
+            listing.Print();
+            Console.WriteLine("...............");
+
+            int a = listing.GetValue(9);
+            int b = listing.GetValue(1);
+            int c = listing.GetValue(44);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+
+
+        }
 
                     Node temp = list1.Current.Next;
                     list1.Current.Next = list2.Current;
@@ -83,5 +113,6 @@ namespace linkedlist
                 list1.Current.Next = list2.Current;
                 list1.Print();
             }
+
     }
 }

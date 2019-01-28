@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using linkedlist.classes;
 using LinkedList.Classes;
@@ -29,7 +29,8 @@ namespace MergeList
 
             list2.Print();
 
-            Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxx");
+
+          
 
             MergeList(list1, list2);
         }
