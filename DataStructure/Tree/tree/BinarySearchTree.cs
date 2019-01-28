@@ -12,40 +12,32 @@ namespace Tree
         {
             Root = null;
         }
-        /// <summary>
-        /// using recursive to add value,everytime compare the value to leftchild and right child
-        /// </summary>
-        /// <param name="curr"></param>
-        /// <param name="val"></param>
-        /// <returns></returns>
-        private Node addRecursive(Node curr, int val)
+        
+        private Node addRecursive(Node current, int val)
         {
-            if (curr == null)
+            if (current == null)
             {
                 return new Node(val);
             }
-            if (val < curr.Value)
+            if (val < current.Value)
             {
-                curr.LeftChild = addRecursive(curr.LeftChild, val);
+                current.LeftChild = addRecursive(current.LeftChild, val);
             }
 
-            else if (val > curr.Value)
+            else if (val > current.Value)
             {
-                curr.RightChild = addRecursive(curr.RightChild, val);
+                current.RightChild = addRecursive(current.RightChild, val);
             }
             else
             {
-                return curr;
+                return current;
             }
-            return curr;
+            return current;
 
 
         }
 
-        /// <summary>
-        /// call recurisive method here
-        /// </summary>
-        /// <param name="val"></param>
+       
         public void Add(int val)
         {
             Root = addRecursive(Root, val);
@@ -116,9 +108,6 @@ namespace Tree
             }
 
         }
-
-
-
 
     }
 }

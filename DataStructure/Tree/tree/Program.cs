@@ -7,44 +7,38 @@ namespace Tree
         public static void Main(string[] args)
         {
 
-            BinarySearchTree bt = createTree();
-            bool a = bt.contains(38);
+            BinarySearchTree binarT = createTree();
+            bool a = binarT.contains(38);
             Console.WriteLine("this contains 38");
             Console.WriteLine(a);
-            bool b = bt.contains(2);
+            bool b = binarT.contains(2);
             Console.WriteLine("this Does not contain  2");
             Console.WriteLine(b);
 
 
             Console.WriteLine("========================");
             BinaryTree bb = new BinaryTree();
-            bb.createTree();
+            bb.Tree();
             Console.WriteLine("========PreOrder=======");
-            bb.preOrder(bb.Root);
-            Console.WriteLine("========inOrder=========");
+            bb.preOrder(bb.Root);          
             bb.inOrder(bb.Root);
-            Console.WriteLine();
-            Console.WriteLine("=====postOrder=======");
+            Console.WriteLine();          
             bb.postOrder(bb.Root);
-
-
         }
 
-
-
-        public static BinarySearchTree createTree()
+        public static BinarySearchTree Tree()
         {
             BinarySearchTree bt = new BinarySearchTree();
 
-            bt.Add(5);
-            bt.Add(3);
-            bt.Add(7);
-            bt.Add(38);
-            bt.Add(93);
-            bt.Add(300);
+            bt.Add(4);
+            bt.Add(2);
+            bt.Add(6);
+            bt.Add(28);
+            bt.Add(73);
             bt.Add(100);
-            bt.Add(13);
-            bt.Add(1);
+            bt.Add(300);
+            bt.Add(15);
+            bt.Add(10);
             return bt;
         }
 

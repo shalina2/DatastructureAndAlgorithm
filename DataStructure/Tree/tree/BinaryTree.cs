@@ -14,10 +14,7 @@ namespace Tree
             Root = null;
         }
 
-        /// <summary>
-        /// just create a binary tree here.Give it several nodes
-        /// </summary>
-        public void createTree()
+        public void Tree()
         {
             Root = new Node(3);
             Root.LeftChild = new Node(59);
