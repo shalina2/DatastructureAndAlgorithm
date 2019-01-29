@@ -5,3 +5,4 @@ if its divisble by 15,return "fizzbuzz"
 On this challenge the input is tree(node)
 and no output.
 
+![](https://github.com/shalina2/DatastructureAndAlgorithm/blob/FizzBuzzTree/Asset/fizzbuzztree.jpg)
