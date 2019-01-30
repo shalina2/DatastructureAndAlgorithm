@@ -7,26 +7,25 @@ namespace Tree
     public class BinarySearchTree
     {
         public Node Root { get; set; }
-
         public BinarySearchTree()
         {
             Root = null;
         }
         
-        private Node addRecursive(Node current, int val)
+        private Node addRecursive(Node current, int value)
         {
             if (current == null)
             {
-                return new Node(val);
+                return new Node(value);
             }
-            if (val < current.Value)
+            if (value < current.Value)
             {
-                current.LeftChild = addRecursive(current.LeftChild, val);
+                current.LeftChild = addRecursive(current.LeftChild, value);
             }
 
-            else if (val > current.Value)
+            else if (value > current.Value)
             {
-                current.RightChild = addRecursive(current.RightChild, val);
+                current.RightChild = addRecursive(current.RightChild, value);
             }
             else
             {
@@ -38,36 +37,31 @@ namespace Tree
         }
 
        
-        public void Add(int val)
+        public void Add(int value)
         {
-            Root = addRecursive(Root, val);
+            Root = addRecursive(Root, value);// calling recursive method
 
         }
 
-        /// <summary>
-        /// should be private, doesn't need to show public the process 
-        /// </summary>
-        /// <param name="curr"></param>
-        /// <param name="val"></param>
-        /// <returns></returns>
-        private bool containsVal(Node curr, int val)
+       
+        private bool containsVal(Node current, int value)
         {
-            if (curr == null)
+            if (current == null)
             {
                 return false;
             }
 
-            if (val == curr.Value)
+            if (value == current.Value)
             {
                 return true;
             }
-            return val < curr.Value ? containsVal(curr.LeftChild, val) : containsVal(curr.RightChild, val);
+            return value < curr.Value ? containsVal(current.LeftChild, value) : containsVal(current.RightChild, value);
         }
 
 
-        public bool contains(int val)
+        public bool contains(int value)
         {
-            return containsVal(Root, val);
+            return containsValue(Root, value);
         }
 
 
@@ -83,8 +77,6 @@ namespace Tree
 
         }
 
-
-
         public void inOrder(Node node)
         {
             if (node != null)
@@ -94,9 +86,7 @@ namespace Tree
 
                 inOrder(node.RightChild);
             }
-
         }
-
 
         public void postOrder(Node node)
         {
