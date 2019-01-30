@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace fizzbuzz
+namespace breadth_first_traversal
 {
     class Program
     {
