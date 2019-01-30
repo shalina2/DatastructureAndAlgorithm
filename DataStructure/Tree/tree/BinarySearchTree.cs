@@ -13,20 +13,20 @@ namespace Tree
             Root = null;
         }
         
-        private Node addRecursive(Node current, int val)
+        private Node addRecursive(Node current, int value)
         {
             if (current == null)
             {
-                return new Node(val);
+                return new Node(value);
             }
-            if (val < current.Value)
+            if (value < current.Value)
             {
-                current.LeftChild = addRecursive(current.LeftChild, val);
+                current.LeftChild = addRecursive(current.LeftChild, value);
             }
 
             else if (val > current.Value)
             {
-                current.RightChild = addRecursive(current.RightChild, val);
+                current.RightChild = addRecursive(current.RightChild, value);
             }
             else
             {
@@ -38,18 +38,13 @@ namespace Tree
         }
 
        
-        public void Add(int val)
+        public void Add(int value)
         {
-            Root = addRecursive(Root, val);
+            Root = addRecursive(Root, value);// calling recursive method
 
         }
 
-        /// <summary>
-        /// should be private, doesn't need to show public the process 
-        /// </summary>
-        /// <param name="curr"></param>
-        /// <param name="val"></param>
-        /// <returns></returns>
+       
         private bool containsVal(Node curr, int val)
         {
             if (curr == null)
@@ -61,13 +56,13 @@ namespace Tree
             {
                 return true;
             }
-            return val < curr.Value ? containsVal(curr.LeftChild, val) : containsVal(curr.RightChild, val);
+            return value < curr.Value ? containsVal(current.LeftChild, value) : containsVal(current.RightChild, value);
         }
 
 
-        public bool contains(int val)
+        public bool contains(int value)
         {
-            return containsVal(Root, val);
+            return containsValue(Root, value);
         }
 
 

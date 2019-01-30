@@ -14,22 +14,18 @@ namespace Tree
             Root = null;
         }
 
-        public void Tree()
+        public void Tree() //creating new tree
         {
             Root = new Node(3);
             Root.LeftChild = new Node(59);
             Root.RightChild = new Node(8);
-            Root.LeftChild.LeftChild = new Node(99);
-            Root.LeftChild.RightChild = new Node(2);
-            Root.RightChild.LeftChild = new Node(19);
-            Root.RightChild.RightChild = new Node(3);
+           // Root.LeftChild.RightChild = new Node(2);
+            //Root.RightChild.LeftChild = new Node(19);
+           // Root.RightChild.RightChild = new Node(3);
         }
 
 
-        /// <summary>
-        /// preOrder from root to the bottom(leaf)
-        /// </summary>
-        /// <param name="node"></param>
+     
         public void preOrder(Node node)
         {
             if (node != null)
@@ -40,10 +36,7 @@ namespace Tree
             }
 
         }
-        /// <summary>
-        /// inorder root comes when left part has done
-        /// </summary>
-        /// <param name="node"></param>
+       
 
         public void inOrder(Node node)
         {
@@ -55,12 +48,8 @@ namespace Tree
             }
 
         }
-        /// <summary>
-        /// post order root comes last
-        /// </summary>
-        /// <param name="node"></param>
-
-        public void postOrder(Node node)
+       
+        public void postOrder(Node node)// Root comes last
         {
             if (node != null)
             {
