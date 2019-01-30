@@ -19,13 +19,9 @@ namespace Tree
             Root = new Node(3);
             Root.LeftChild = new Node(59);
             Root.RightChild = new Node(8);
-           // Root.LeftChild.RightChild = new Node(2);
-            //Root.RightChild.LeftChild = new Node(19);
-           // Root.RightChild.RightChild = new Node(3);
+          
         }
 
-
-     
         public void preOrder(Node node)
         {
             if (node != null)

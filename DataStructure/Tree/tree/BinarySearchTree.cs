@@ -7,7 +7,6 @@ namespace Tree
     public class BinarySearchTree
     {
         public Node Root { get; set; }
-
         public BinarySearchTree()
         {
             Root = null;
@@ -24,7 +23,7 @@ namespace Tree
                 current.LeftChild = addRecursive(current.LeftChild, value);
             }
 
-            else if (val > current.Value)
+            else if (value > current.Value)
             {
                 current.RightChild = addRecursive(current.RightChild, value);
             }
@@ -45,14 +44,14 @@ namespace Tree
         }
 
        
-        private bool containsVal(Node curr, int val)
+        private bool containsVal(Node current, int value)
         {
-            if (curr == null)
+            if (current == null)
             {
                 return false;
             }
 
-            if (val == curr.Value)
+            if (value == current.Value)
             {
                 return true;
             }
@@ -78,8 +77,6 @@ namespace Tree
 
         }
 
-
-
         public void inOrder(Node node)
         {
             if (node != null)
@@ -89,9 +86,7 @@ namespace Tree
 
                 inOrder(node.RightChild);
             }
-
         }
-
 
         public void postOrder(Node node)
         {
