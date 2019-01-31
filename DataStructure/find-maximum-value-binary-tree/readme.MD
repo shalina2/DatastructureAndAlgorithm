@@ -10,3 +10,4 @@ Time O(n)
 
 Here is the white Board representation
 
+![](https://github.com/shalina2/DatastructureAndAlgorithm/blob/find-maximum-value-binary-tree/Asset/MaxBinarytree.jpg)
